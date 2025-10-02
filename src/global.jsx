@@ -7,7 +7,8 @@ import Footer from "@/layouts/Footer"
 export default function (props) {
   const {
     children,
-    title
+    title,
+    url,
   } = props
   
   return (
@@ -40,8 +41,10 @@ export default function (props) {
           href="/site.webmanifest"
         />
       </Head>
-      <Header />
-      <Content>{children}</Content>
+      <Header url={url}/>
+      <Content>
+        {children}
+      </Content>
       <Footer />
     </>
   )
