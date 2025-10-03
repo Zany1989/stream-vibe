@@ -2,6 +2,7 @@ import "./Header.scss"
 import Logo from "@/components/Logo";
 import classNames from "classnames";
 import Button from "@/components/Button";
+import BurgerButton from "@/components/BurgerButton";
 
 const Header = (props) => {
   const {
@@ -51,9 +52,24 @@ const Header = (props) => {
           </ul>
         </nav>
         <div className="header__actions">
-          <Button className="header__button"/>
-          <Button href="/" />
+          <Button
+            className="header__button"
+            label="Search"
+            isLabelHidden
+            mode="transparent"
+            iconName="search"
+          />
+          <Button
+            className="header__button"
+            label="Notifications"
+            isLabelHidden
+            mode="transparent"
+            iconName="notification"
+          />
         </div>
+        <BurgerButton
+          className="header__burger-button"
+        />
       </div>
     </header>
   )
